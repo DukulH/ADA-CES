@@ -2,14 +2,49 @@
     min-height: 90vh;
 }
 .btnDesign{
+    position: relative;
     border: none;
     padding: 10px 40px;
     margin-top: 20px;
     border-radius: 20px;
     color: white;
-    background-image: linear-gradient(to right, black, rgb(97, 75, 75)); 
-    transition: 2s;
+    background-image: linear-gradient(to right, rgb(73, 17, 43), rgb(183, 136, 136)); 
+    z-index: 1;
 }
-.btnDesign:hover {
-    background-image:linear-gradient(to right,rgb(97, 75, 75),black);
+.btnDesign::before {
+    position: absolute;
+    border-radius: 20px;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(
+      to right,
+      rgb(183, 136, 136),
+      rgb(73, 17, 43)
+    );
+    z-index: -1;
+    transition: opacity .5s linear;
+    opacity: 0;
+  }
+.btnDesign:hover::before {
+    opacity: 1;
+  }
+.forgotTextDesign{
+    text-decoration: none;
+    background: -webkit-linear-gradient(right,#ff9966, #ff5e62);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.btnDesign2{
+    border: none;
+    padding: 10px 80px;
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(73, 17, 43);
+}
+.btnDesign2:hover{
+    opacity: .9;
 }

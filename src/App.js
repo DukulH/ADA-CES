@@ -5,14 +5,14 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
+import LoginRoot from "./components/login/index";
 
 function App() {
   return (
     <Router>
         <Switch>
-          <Route path="/about">
-           
+          <Route exact path="/">
+            <LoginRoot />
           </Route>
           <Route path="/users">
             

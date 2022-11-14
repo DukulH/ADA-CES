@@ -2,6 +2,7 @@ import React from 'react'
 import LoginPage from './login'
 import loginImg from "../../assets/image/loginImg.jpg"
 import './style.css'
+import TextField from '@mui/material/TextField';
 
 function LoginRoot() {
   return (
@@ -11,7 +12,14 @@ function LoginRoot() {
         <div className="col-md-4 imageSection ps-0">
             <img className='img-fluid w-100' src={loginImg} alt=""/>
         </div>
-        <div className="col-md-8 contentSection "></div>
+        <div className="col-md-8 row contentSection ">
+            <div className="col-md-6 border">
+            <TextField fullWidth label="Email" id="fullWidth" />
+            <TextField fullWidth label="Password" id="fullWidth" />
+            <button className='btnDesign'>Login</button>
+            </div>
+            <div className="col-md-6 border">gello</div>
+        </div>
     </div>
     </div>
    
